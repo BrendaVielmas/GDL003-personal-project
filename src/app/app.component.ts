@@ -108,5 +108,12 @@ export class AppComponent {
     sound = "../assets/sounds/" +"b5.mp3";
     sound && ( new Audio(sound) ).play()
   }
+/*do do do fa la
+do do do fa la
+fa fa mi mi re re do
+
+do do do mi sol
+do do do mi sol
+do' re' do' sib la sol fa*/
 }
 
