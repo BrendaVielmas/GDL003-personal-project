@@ -1,27 +1,23 @@
-# AngularProject
+# Titulo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.10.
+## Preámbulo
+Aquí nos darás un intro sobre tu proyecto, puede ser tanto la problemática que vas a resolver o el objetivo del proyecto. 
 
-## Development server
+## Introducción
+Parecido al preámbulo, solo que nos darás más información sobre el proyecto.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Objetivos de aprendizaje
+¿Qué aprenderás con este proyecto? Si tienes dudas, puedes acercarte a los coaches para aterrizar estos objetivos
 
-## Code scaffolding
+## Consideraciones Generales
+Las reglas del juego para tu proyecto. Como te vas a organizar, que cosas se pueden utilizar, etc.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Avances esperados
+Qué esperas lograr con este proyecto según el tiempo establecido.
 
-## Build
+## Hacker Edition
+Lo que te gustaría lograr cuando los avances esperados esten listos.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Uso
+Explica a quienes visiten tu repo como pueden contribuir a tu proyecto. ¿Hay que instalar algo? Describe los pasos para poder correr localmente el proyecto.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
