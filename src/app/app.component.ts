@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PianoComponent } from './piano/piano.component';
+
 
 @Component({
   selector: 'app-root',

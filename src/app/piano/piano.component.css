@@ -53,9 +53,60 @@ li {
     border-radius:2em;
     font-family:'Roboto',sans-serif;
     color:#FFFFFF;
-    box-shadow:0 0 50px rgba(248, 109, 109, 0.5) inset,0 1px rgba(255, 116, 51, 0.2) inset,0 5px 15px rgba(255, 23, 23, 0.5);
+   
 }
 .buttonSong1:hover{
-    box-shadow:0 0 50px rgba(248, 109, 109, 0.5) inset,0 1px rgba(255, 116, 51, 0.2) inset,0 5px 15px rgba(255, 23, 23, 0.5);
-    border:5px solid #f0038d;
+    border:5px solid #610061;
+}
+.buttonSong2 {
+    background-color:#71c59e;
+    padding:0.3em 1.2em;
+    margin:1em 0.9em 0.9em 1em;
+    border:0.16em solid rgba(66, 0, 104, 0);
+    border-radius:2em;
+    font-family:'Roboto',sans-serif;
+    color:#FFFFFF;   
+}
+.buttonSong2:hover{
+    border:5px solid #00721c;
+}
+.buttonSong3 {
+    background-color:#6397f8;
+    padding:0.3em 1.2em;
+    margin:1em 0.9em 0.9em 1em;
+    border:0.16em solid rgba(66, 0, 104, 0);
+    border-radius:2em;
+    font-family:'Roboto',sans-serif;
+    color:#FFFFFF;   
+}
+.buttonSong3:hover{
+    border:5px solid #0e0374;
+}
+.buttonSong4 {
+    background-color:#f88d63;
+    padding:0.3em 1.2em;
+    margin:1em 0.9em 0.9em 1em;
+    border:0.16em solid rgba(66, 0, 104, 0);
+    border-radius:2em;
+    font-family:'Roboto',sans-serif;
+    color:#FFFFFF;   
+}
+.buttonSong4:hover{
+    border:5px solid #be5600;
+}
+.invisible{
+    display: none;
+}
+.recBtn{
+float: right;
+background-color:#861111;
+padding:0.3em 1.2em;
+margin:1em 0.9em 0.9em 1em;
+border:0.16em solid rgba(66, 0, 104, 0);
+border-radius:2em;
+font-family:'Roboto',sans-serif;
+color:#FFFFFF;   
+}
+.recBtn:hover{
+    border:5px solid #5a0101;
 }

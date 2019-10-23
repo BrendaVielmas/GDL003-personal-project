@@ -1,6 +1,13 @@
    
    
-    <button (click)="startSong()" [ngClass]="'buttonSong1'"> La Cucaracha </button>
+    <button (click)="startSong('LaCucaracha')" [ngClass]="'buttonSong1'"> La Cucaracha </button>
+    <button (click)="startSong('ItsyBitsySpider')" [ngClass]="'buttonSong2'"> Itsy Bitsy Spider </button> 
+    <button (click)="startSong('RowYourBoat')" [ngClass]="'buttonSong3'"> Row Your Boat </button>
+    <button (click)="startSong('Rugrats')" [ngClass]="'buttonSong4'"> Rugrats </button>
+    <button (click)="startSong('test')" [ngClass]="'buttonSong1'"> Record </button>
+    <button (click)="recordSong()" [ngClass]="{invisible: isRecording, recBtn: true}"> Record </button>
+    <button (click)="stopRecSong()" [ngClass]="{invisible: !isRecording, recBtn: true}"> Stop the Record </button>
+    <div (window:keyup)="onKeydown($event)"></div>
     <ul>
         <li><button (click)="startTheNote('c4')" [ngClass]="{whiteBtn: true, highlightBtn: isHighlighted.c4}" id="c4">c4</button></li>
         <li><button (click)="startTheNote('cd4')" [ngClass]="{blackBtn: true, highlightBtn: isHighlighted.cd4}" id="cd4">cd4</button></li>
