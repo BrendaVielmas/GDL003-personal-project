@@ -1,0 +1,7 @@
+<div class="form">
+        <form (submit)="createUser()" class="login-form" id="login-form">
+            <input type="text" [(ngModel)]="person.emailname" name="email" placeholder="Email"/>
+            <input type="password"  [(ngModel)]="person.passwordName" name="password" placeholder="Password"/>        
+            <input class="subbt" type="submit" value="Register" style="border:none;"/>   
+        </form>
+</div>
