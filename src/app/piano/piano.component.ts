@@ -11,6 +11,7 @@ export class PianoComponent implements OnInit {
   alerts: Alert[] = [];
   isHighlighted: Object = {};
   isRecording: boolean = false;
+  stopRecording: boolean = false;
   newSong: Array<string> = [];
   songPosition: number = 0;
   currentSong: Array<string> = [];
@@ -66,10 +67,10 @@ export class PianoComponent implements OnInit {
     this.isHighlighted = {};
   }
   stopRecSong(){
-    this.isRecording = false;
+    this.stopRecording = true;
+    this.isRecording = true;
     this.comp.addSong(this.newSong);
-    let newName = "";
-    prompt("Please enter the name of your new song:", newName);
-    document.getElementById("changeName").value = newName;
+    let newName = prompt("Please enter the name of your new song:");
+    document.getElementById("changeName").setAttribute("value", newName);
   }
 }

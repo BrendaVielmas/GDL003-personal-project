@@ -4,7 +4,7 @@
     <input type = 'button' (click)="startSong('ItsyBitsySpider')" [ngClass]="'buttonSong2'" value='Itsy Bitsy Spider'/>
     <input type = 'button' (click)="startSong('RowYourBoat')" [ngClass]="'buttonSong3'" value='Row Your Boat'/>
     <input type = 'button' (click)="startSong('Rugrats')" [ngClass]="'buttonSong4'" value='Rugrats'/>
-    <input type = 'button' (click)="startSong('test')" [ngClass]="'buttonSong1'" id='changeName' value='Test'/>
+    <input type = 'button' (click)="startSong('test')" [ngClass]="{buttonSong4: true, invisible: !stopRecording}" id='changeName' value='Test'/>
     <button (click)="recordSong()" [ngClass]="{invisible: isRecording, recBtn: true}"> Record </button>
     <button (click)="stopRecSong()" [ngClass]="{invisible: !isRecording, recBtn: true}"> Stop the Record </button>
     <div (window:keyup)="onKeydown($event)"></div>
