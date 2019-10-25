@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -6,12 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  public email: string;
+  public password: string;
+  constructor(
+    public authService: AuthService
+  ) { }
 
   ngOnInit() {
   }
-  googleLogIn(){
-    console.log("hola")
+  loginEmail(){
+    this.authService.loginEmail(this.email, this.password)
+    .then( (res) => {
+      console.log('Bien');
+      console.log(res);
+    }).catch( (err) => {
+      console.log(err);
+    });
   }
 }
