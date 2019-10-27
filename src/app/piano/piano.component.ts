@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SongsComponent } from '../songs/songs.component';
 import { Alert } from 'selenium-webdriver';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   providers: [ SongsComponent ],
   selector: 'app-piano',
@@ -8,6 +10,9 @@ import { Alert } from 'selenium-webdriver';
   styleUrls: ['./piano.component.css']
 })
 export class PianoComponent implements OnInit {
+  public isLogin: boolean;
+  public userName: string;
+  public userEmail: string;
   alerts: Alert[] = [];
   isHighlighted: Object = {};
   isRecording: boolean = false;
@@ -22,10 +27,25 @@ export class PianoComponent implements OnInit {
     "E":"de5", "D":"e5", "F":"f5", "T":"fg5", "G":"g5",
     "Y":"ga5", "H":"a5", "U":"ab5", "J":"b5" } 
 
-  constructor(private comp: SongsComponent) { 
-  }
+  constructor(
+    private comp: SongsComponent,
+    public authService: AuthService,
+    public router: Router
+  ) { }
   ngOnInit() {
-    
+    this.authService.getAuth().subscribe( auth =>{
+      if (auth){
+        this.isLogin = true;
+        this.userName = auth.displayName;
+        this.userEmail = auth.email;
+      }else {
+        this.isLogin = false;
+      }
+    })
+  }
+  logOut(){
+    this.authService.logout();
+    this.router.navigate(['/']);
   }
   public startSong(song): void {
     this.isHighlighted = {};

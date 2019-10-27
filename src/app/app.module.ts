@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthGuard} from './guards/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
      FormsModule,
      AngularFireAuthModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

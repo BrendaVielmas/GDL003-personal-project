@@ -1,26 +1,31 @@
-<body id="myId"> 
-    <section class="register-account"> 
-          <div class="signform">      
-            <div class="left">
-              <a  href="/register" style="float:right;margin-right:35px;font-size: 0.9em;" class="bts-a">Don't have an account? Sign up!</a>
-              <div class="bts">
-                <a href="#" class="fblogin social"><span>Sign in with Facebook</span></a>
-                <a href="#" class="twlogin social"><span>Sign in with Twitter</span></a>
-                <a href="#" class="gplogin social" (click)="googleLogIn()"><span>Sign in with Google</span></a>             
-              </div>
-            </div>
-            <div class="right">
-                <div class="headit">
-                  <h4>Login To Your Account</h4>
-                </div>
-                <div class="form">
-                  <form (submit)="loginEmail()" class="login-form" id="login-form">
-                      <input type="text" id="email" placeholder="Email"/>
-                      <input type="password" id="password" placeholder="Password"/>        
-                      <button><a href="/home"  type="submit" class="subbt">Sign in</a></button> 
-                  </form>
-                  <input type="checkbox" id="remember" name="remember"><span style="color:#b6b6b6;font-size: 0.9em;"> Remember Me</span><a href="#">Forgot your password?</a>        
-                </div>
-            </div>       
-          </div>
-    </section>
+    <div class="login-box">
+      <div class="lb-header">
+        <a href="#" class="active" id="login-box-link">Login</a>
+        <a href="/register" id="signup-box-link">Sign Up</a>
+      </div>
+      <div class="social-login">
+        <a href="#">
+          <i class="fa fa-facebook fa-lg"></i>
+          Login in with facebook
+        </a>
+        <a href="#" (click)="googleLogIn()">
+          <i class="fa fa-google-plus fa-lg"></i>
+          log in with Google
+        </a>
+      </div>
+      <form (submit)="loginEmail()" class="email-login">
+        <div class="u-form-group">
+          <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" placeholder="Email"/>
+        </div>
+        <div class="u-form-group">
+          <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password"/>
+        </div>
+        <div class="u-form-group">
+          <button >Log in</button>
+        </div>
+        <div class="u-form-group">
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+      </form>
+    
+    </div>

@@ -4,9 +4,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PianoComponent } from './piano/piano.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
 {path: '', component: LoginComponent},
-{path: 'home', component: PianoComponent},
+{path: 'home', component: PianoComponent, canActivate: [AuthGuard]},
 {path: 'register', component: RegisterComponent},
 {path: '**', component: NotFoundComponent}
 ];

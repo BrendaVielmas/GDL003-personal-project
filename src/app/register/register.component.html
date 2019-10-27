@@ -1,10 +1,31 @@
-  <div class="login-page">
-    <div class="form">
-      <form (submit)="createUser()" class="login-form">
-        <input type="text" [(ngModel)]="email" placeholder="Email address"/>
-        <input type="password" [(ngModel)]="password" placeholder="Password"/>
-        <button><a href="/home"  type="submit" class="subbt">Register</a></button>
-        <p class="message">Already registered? <a href="#">Sign In</a></p>
-      </form>
+
+  <div class="login-box">
+    <div class="lb-header">
+      <a href="#" id="login-box-link">Login</a>
+      <a href="/register" class="active" id="signup-box-link">Sign Up</a>
     </div>
-  </div>
+    <div class="social-login">
+      <a href="#">
+        <i class="fa fa-facebook fa-lg"></i>
+        Login in with facebook
+      </a>
+      <a href="#">
+        <i class="fa fa-google-plus fa-lg"></i>
+        log in with Google
+      </a>
+    </div>
+  <form (submit)="createUser()" class="email-signup">
+    <div class="u-form-group">
+      <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" placeholder="Email"/>
+    </div>
+    <div class="u-form-group">
+      <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password"/>
+    </div>
+    <div class="u-form-group">
+      <input type="password" placeholder="Confirm Password"/>
+    </div>
+    <div class="u-form-group">
+      <button><a type="submit" class="subbt">Sign Up</a></button>
+    </div>
+  </form>
+</div>
