@@ -27,10 +27,10 @@ export class LoginComponent implements OnInit {
   loginEmail(){
     this.authService.loginEmail(this.email, this.password)
     .then( (res) => {
-      this.flashMessage.show('So good to see you again! :)', {cssClass: 'alert', timeout: 5000});
+      this.flashMessage.show('So good to see you again! :)', {cssClass: 'alert', timeout: 60000});
       this.router.navigate(['/home']);
     }).catch( (err) => {
-      this.flashMessage.show(err.message, {cssClass: 'alert', timeout: 5000});
+      this.flashMessage.show(err.message, {cssClass: 'alert', timeout: 60000});
       this.router.navigate(['/']);
     });
   }

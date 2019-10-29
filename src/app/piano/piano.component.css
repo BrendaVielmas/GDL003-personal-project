@@ -94,9 +94,7 @@ li {
 .buttonSong4:hover{
     border:5px solid #be5600;
 }
-.invisible{
-    display: none;
-}
+
 .recBtn{
 float: right;
 background-color:#861111;

@@ -10,7 +10,7 @@
         Login in with facebook
       </a>
       <a href="#">
-        <i class="fa fa-google-plus fa-lg"></i>
+        <i class="fa fa-google fa-lg"></i>
         log in with Google
       </a>
     </div>
@@ -21,8 +21,9 @@
     <div class="u-form-group">
       <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password"/>
     </div>
+    <p [ngClass]="{invisible: password == confirmPassword || confirmPassword.length == 0}">Confirm password mismatch.</p>
     <div class="u-form-group">
-      <input type="password" placeholder="Confirm Password"/>
+      <input type="password"  [(ngModel)]="confirmPassword" [ngModelOptions]="{standalone: true}" placeholder="Confirm Password" />
     </div>
     <div class="u-form-group">
       <button><a type="submit" class="subbt">Sign Up</a></button>

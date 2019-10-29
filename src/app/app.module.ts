@@ -17,7 +17,6 @@ import { AuthGuard} from './guards/auth.guard';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
      FormsModule,
      AngularFireAuthModule,
      FlashMessagesModule,
-     FontAwesomeModule,
-     NgbModule
+     FontAwesomeModule
   ],
   providers: [AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]

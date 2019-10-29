@@ -10,6 +10,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 export class RegisterComponent implements OnInit {
   public email: string;
   public password: string;
+  public confirmPassword: string;
   constructor(
     public authService: AuthService,
     public router: Router,
@@ -21,14 +22,15 @@ export class RegisterComponent implements OnInit {
   }
   
   createUser(){
-    this.authService.registerUser(this.email, this.password)
-    .then( (res) => {
+    if( this.password == this.confirmPassword) {
+      this.authService.registerUser(this.email, this.password)
+      .then( (res) => {
       //Welcome to Piammy! In the upper right corner you can find a Tutorial to start the game. Enjoy it! :)
-      this.flashMessage.show('Thanks for creating your account, we sent you an email to verificate your account.', {cssClass: 'alert', timeout: 5000});
-      this.router.navigate[('/home')];
-    }).catch( (err) => {
-      this.flashMessage.show(err.message, {cssClass: 'alert', timeout: 5000});
-      this.router.navigate(['/']);
-    })
+        this.flashMessage.show('Thanks for creating your account, we sent you an email to verificate your account.', {cssClass: 'alert', timeout: 60000});
+        this.router.navigate[('/home')];
+      }).catch( (err) => {
+        this.flashMessage.show(err.message, {cssClass: 'alert', timeout: 60000});
+      })
+    }
   }
 }
