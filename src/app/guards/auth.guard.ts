@@ -6,7 +6,6 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthService } from '../services/auth.service';
-import { auth } from 'firebase';
 
 @Injectable()
 export class AuthGuard implements CanActivate {

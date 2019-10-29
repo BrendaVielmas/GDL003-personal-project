@@ -14,6 +14,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthGuard} from './guards/auth.guard';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import { FlashMessagesService } from 'angular2-flash-messages';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +33,13 @@ import { AuthGuard} from './guards/auth.guard';
     AngularFireModule.initializeApp(environment.firebase),
      AngularFirestoreModule,
      FormsModule,
-     AngularFireAuthModule
+     AngularFireAuthModule,
+     FlashMessagesModule,
+     FontAwesomeModule,
+     NgbModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ }
