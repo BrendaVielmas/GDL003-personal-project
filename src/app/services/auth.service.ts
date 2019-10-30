@@ -23,6 +23,20 @@ export class AuthService {
     });
   }
 
+  resetPassword(email: string){
+    return this.afAuth.auth.sendPasswordResetEmail(email)
+    .then(() => {
+    }).catch(function(error) {
+    });
+  }
+
+  userVerification(email: string) {
+    return  this.afAuth.auth.currentUser.sendEmailVerification()
+    .then(() => {
+    }).catch(function(error) {
+    });
+  }
+
   loginEmail(email: string, password: string) {
     return new Promise((resolve, reject) => {
       this.afAuth.auth.signInWithEmailAndPassword(email, password)

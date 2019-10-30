@@ -23,10 +23,10 @@
     </div>
     <p [ngClass]="{invisible: password == confirmPassword || confirmPassword.length == 0}">Confirm password mismatch.</p>
     <div class="u-form-group">
-      <input type="password"  [(ngModel)]="confirmPassword" [ngModelOptions]="{standalone: true}" placeholder="Confirm Password" />
+      <input type="password" [(ngModel)]="confirmPassword" [ngModelOptions]="{standalone: true}" placeholder="Confirm Password" />
     </div>
     <div class="u-form-group">
-      <button><a type="submit" class="subbt">Sign Up</a></button>
+      <button (click)="userValidation()"><a type="submit" class="subbt">Sign Up</a></button>
     </div>
   </form>
 </div>

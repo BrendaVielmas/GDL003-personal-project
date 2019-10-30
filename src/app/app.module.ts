@@ -17,6 +17,7 @@ import { AuthGuard} from './guards/auth.guard';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SongsComponent,
     LoginComponent,
     RegisterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

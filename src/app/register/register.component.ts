@@ -33,4 +33,7 @@ export class RegisterComponent implements OnInit {
       })
     }
   }
+  userValidation(){
+    this.authService.userVerification(this.email);
+  }
 }
