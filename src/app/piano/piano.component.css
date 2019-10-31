@@ -53,48 +53,28 @@ li {
     border-radius:2em;
     font-family:'Roboto',sans-serif;
     color:#FFFFFF;
-   
 }
 .buttonSong1:hover{
     border:5px solid #610061;
 }
-.buttonSong2 {
+.buttonSong1:nth-child(3n) {
     background-color:#71c59e;
-    padding:0.3em 1.2em;
-    margin:1em 0.9em 0.9em 1em;
-    border:0.16em solid rgba(66, 0, 104, 0);
-    border-radius:2em;
-    font-family:'Roboto',sans-serif;
-    color:#FFFFFF;   
 }
-.buttonSong2:hover{
+.buttonSong1:hover:nth-child(3n) {
     border:5px solid #00721c;
 }
-.buttonSong3 {
+.buttonSong1:nth-child(5n) {
     background-color:#6397f8;
-    padding:0.3em 1.2em;
-    margin:1em 0.9em 0.9em 1em;
-    border:0.16em solid rgba(66, 0, 104, 0);
-    border-radius:2em;
-    font-family:'Roboto',sans-serif;
-    color:#FFFFFF;   
 }
-.buttonSong3:hover{
+.buttonSong1:hover:nth-child(5n) {
     border:5px solid #0e0374;
 }
-.buttonSong4 {
+.buttonSong1:nth-child(4n) {
     background-color:#f88d63;
-    padding:0.3em 1.2em;
-    margin:1em 0.9em 0.9em 1em;
-    border:0.16em solid rgba(66, 0, 104, 0);
-    border-radius:2em;
-    font-family:'Roboto',sans-serif;
-    color:#FFFFFF;   
 }
-.buttonSong4:hover{
+.buttonSong1:hover:nth-child(4n) {
     border:5px solid #be5600;
 }
-
 .recBtn{
 float: right;
 background-color:#861111;
@@ -108,3 +88,16 @@ color:#FFFFFF;
 .recBtn:hover{
     border:5px solid #5a0101;
 }
+.logOutBtn{
+    float: right;
+    background-color:#000000;
+    padding:0.3em 1.2em;
+    margin:1em 0.9em 0.9em 1em;
+    border:0.16em solid rgba(66, 0, 104, 0);
+    border-radius:2em;
+    font-family:'Roboto',sans-serif;
+    color:#FFFFFF;   
+    }
+    .logOutBtn:hover{
+        border:5px solid #3b3a3a;
+    }

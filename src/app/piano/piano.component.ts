@@ -3,6 +3,10 @@ import { SongsComponent } from '../songs/songs.component';
 import { Alert } from 'selenium-webdriver';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { dataSongs } from '../models/data-songs';
+import { Observable } from 'rxjs';
+
+
 @Component({
   providers: [ SongsComponent ],
   selector: 'app-piano',
@@ -13,6 +17,7 @@ export class PianoComponent implements OnInit {
   public isLogin: boolean;
   public userName: string;
   public userEmail: string;
+  public songs: Observable<dataSongs[]>;
   alerts: Alert[] = [];
   isHighlighted: Object = {};
   isRecording: boolean = false;
@@ -33,6 +38,10 @@ export class PianoComponent implements OnInit {
     public router: Router
   ) { }
   ngOnInit() {
+    this.songs = this.authService.getSong();
+    this.authService.getSong().subscribe(songs =>{
+      console.log(songs);
+    })
     this.authService.getAuth().subscribe( auth =>{
       if (auth){
         this.isLogin = true;
@@ -50,6 +59,15 @@ export class PianoComponent implements OnInit {
   public startSong(song): void {
     this.isHighlighted = {};
     this.currentSong = this.comp.getSong(song);
+    this.songPosition = 0;
+    if (this.currentSong){
+      let key = this.currentSong[this.songPosition];
+      this.isHighlighted[key] = true;
+    }
+  }
+  public setCurrentSong(notesArray): void {
+    this.isHighlighted = {};
+    this.currentSong = notesArray;
     this.songPosition = 0;
     if (this.currentSong){
       let key = this.currentSong[this.songPosition];
@@ -88,9 +106,14 @@ export class PianoComponent implements OnInit {
   }
   stopRecSong(){
     this.stopRecording = true;
-    this.isRecording = true;
+    this.isRecording = false;
     this.comp.addSong(this.newSong);
     let newName = prompt("Please enter the name of your new song:");
-    document.getElementById("changeName").setAttribute("value", newName);
+    let song:dataSongs = {
+      userEmail: "",
+      name: newName,
+      notes: this.newSong
+    }
+    this.authService.addSong(song);
   }
 }

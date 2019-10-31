@@ -31,7 +31,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase, 'piano-app'),
      AngularFirestoreModule,
      FormsModule,
      AngularFireAuthModule,

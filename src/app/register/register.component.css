@@ -1,10 +1,11 @@
 .login-box{
-  font-family: sans-serif;
+  font-family: 'Dekko', cursive;
   position:relative;
   margin: 10px auto;
+  margin-top: 50px;
   width: 500px;
   height: 380px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 10px;
   border-radius: 3px;
   -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
@@ -100,7 +101,7 @@ box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
 }
 .u-form-group button{
   width:50%;
-  background-color: #1CB94E;
+  background-color: rgb(28, 185, 133);
   border: none;
   outline: none;
   color: #fff;
