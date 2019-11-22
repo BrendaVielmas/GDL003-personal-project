@@ -19,7 +19,7 @@ export class PianoComponent implements OnInit {
   public userEmail: string;
   public songs: Observable<dataSongs[]>;
   alerts: Alert[] = [];
-  isHighlighted: Object = {};
+  isHighlighted: any = {}
   isRecording: boolean = false;
   stopRecording: boolean = false;
   newSong: Array<string> = [];
@@ -30,7 +30,9 @@ export class PianoComponent implements OnInit {
     "f":"f4", "t":"fg4", "g":"g4", "y":"ga4", "h":"a4",
     "u":"ab4", "j":"b4", "A":"c5", "W":"cd5", "S":"d5",
     "E":"de5", "D":"e5", "F":"f5", "T":"fg5", "G":"g5",
-    "Y":"ga5", "H":"a5", "U":"ab5", "J":"b5" } 
+    "Y":"ga5", "H":"a5", "U":"ab5", "J":"b5" };
+  isHighlightedDefault: Object = {}
+
 
   constructor(
     private comp: SongsComponent,
