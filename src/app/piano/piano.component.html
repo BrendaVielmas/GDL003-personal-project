@@ -1,13 +1,15 @@
    
-    <input type = 'button' *ngIf="isLogin" (click)="logOut()" [ngClass]="'logOutBtn'" value='Log Out'/>
-    <input type = 'button' (click)="startSong('LaCucaracha')" [ngClass]="'buttonSong1'" value='La Cucaracha'/>
-    <input type = 'button' (click)="startSong('ItsyBitsySpider')" [ngClass]="'buttonSong1'" value='Itsy Bitsy Spider'/>
-    <input type = 'button' (click)="startSong('RowYourBoat')" [ngClass]="'buttonSong1'" value='Row Your Boat'/>
-    <input type = 'button' (click)="startSong('Rugrats')" [ngClass]="'buttonSong1'" value='Rugrats'/>
-    <input type = 'button' *ngFor="let song of songs | async" (click)="setCurrentSong(song.notes)" [ngClass]="'buttonSong1'" value='{{song.name}}'/>
+    <div  [ngClass]="'BtnsHome'">
+        <input type = 'button' *ngIf="isLogin" (click)="logOut()" [ngClass]="'logOutBtn'" value='Log Out'/>
+        <input type = 'button' (click)="startSong('LaCucaracha')" [ngClass]="'buttonSong1'" value='La Cucaracha'/>
+        <input type = 'button' (click)="startSong('ItsyBitsySpider')" [ngClass]="'buttonSong1'" value='Itsy Bitsy Spider'/>
+        <input type = 'button' (click)="startSong('RowYourBoat')" [ngClass]="'buttonSong1'" value='Row Your Boat'/>
+        <input type = 'button' (click)="startSong('Rugrats')" [ngClass]="'buttonSong1'" value='Rugrats'/>
+        <input type = 'button' *ngFor="let song of songs | async" (click)="setCurrentSong(song.notes)" [ngClass]="'buttonSong1'" value='{{song.name}}'/>
     
     <button (click)="recordSong()" [ngClass]="{invisible: isRecording, recBtn: true}"> Record </button>
     <button (click)="stopRecSong()" [ngClass]="{invisible: !isRecording, recBtn: true}"> Stop the Record </button>
+</div>
     <div (window:keyup)="onKeydown($event)"></div>
     <ul>
         <li><button (click)="startTheNote('c4')" [ngClass]="{whiteBtn: true, highlightBtn: isHighlighted.c4}" id="c4"></button></li>
