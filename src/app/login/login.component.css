@@ -120,3 +120,12 @@
     color: #888;
     font-size: 0.75rem;
   }
+  .demoBox{
+    float: inline-end;
+    width: 70%;
+    border: solid rgb(124, 185, 134);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
