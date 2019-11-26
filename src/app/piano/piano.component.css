@@ -102,29 +102,12 @@ color:#FFFFFF;
         border:5px solid #3b3a3a;
     }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) and (orientation : landscape) {
+    .BtnsHome{
+        margin-left: 60%;
+        width: 780px;
+    }
     ul{
-        height:100%;
-        width:85%;
-    }
-    .whiteBtn{
-        width: 270px;
-        height: 40px;
-    }
-    .blackBtn{
-        width: 170px;
-        height: 40px;
-        margin: -3.5em 0 0 0;
-    }
-    li{
-        float: none;
-    }
-    .middleBtn {
-        margin:-3.5em 0 0 0;
-    }
-    
-    .HomeBtns{
-        display: none;
-        background: #000;
+        margin-top: 10%;
     }
 }
